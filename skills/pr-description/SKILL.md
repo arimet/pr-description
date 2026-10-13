@@ -31,7 +31,7 @@ Quote the need in English. If the source is in another language, translate it fa
 
 Never derive the intent from the diff: the diff is what gets checked against it.
 
-In update mode, keep the 🎯 Intent of the existing description unless the developer gave a new one.
+In update mode, keep the 🎯 Intent of the existing description unless the developer gave a new one. If the kept quote is not in English, translate it with the rule above.
 
 ## 3. Context
 
