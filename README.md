@@ -76,7 +76,7 @@ Here is a real description, rendered as GitHub shows it:
 | Section | Always there | What it holds |
 |---|---|---|
 | TL;DR | yes | What & why in one sentence, the risk level, the file to read first |
-| 🎯 Intent | yes | The need, quoted word for word, with its source and provenance |
+| 🎯 Intent | yes | The need, quoted in English (translated faithfully if needed), with its source and provenance |
 | 🧭 Non-obvious decisions | yes | Choices a reviewer would question, each with its reason |
 | 🧪 Tests | yes | What was run and its result, then what was not verified |
 | 💥 Impact if wrong | yes | Who is affected, the worst case, how to roll back |
@@ -127,7 +127,7 @@ To get the best 🎯 Intent, give the agent the source of the work: a ticket lin
 1. **Platform.** Reads the `origin` remote to choose `gh` or `glab`, and checks whether the branch already has a PR/MR.
 2. **Intent.** Takes the first available of: a source you gave or an issue referenced in the branch or commits (`provided by dev`), your own words (`written by dev`), the session (`inferred from session`).
 3. **Context.** Fetches the base branch and reads the diff against its remote version, the commits, the repository's PR/MR template, and the titles of recent merged PRs to follow their convention.
-4. **Writing.** Fills the sections with the rules below, in English. The intent quote stays in its original language.
+4. **Writing.** Fills the sections with the rules below, in English. An intent written in another language is translated without changing its meaning.
 5. **Merge.** If the repository has a PR/MR template, fills it. Everything the skill writes goes between `<!-- pr-description:start -->` and `<!-- pr-description:end -->`. On update, rewrites only that block, so manual edits survive.
 6. **Publish.** Writes the body to `.git/pr-description.md` (inside the Git directory, never committed), pushes the branch, then runs `gh pr create|edit` or `glab mr create|update`.
 
