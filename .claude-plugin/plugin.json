@@ -1,0 +1,9 @@
+{
+  "name": "pr-description",
+  "version": "0.1.0",
+  "description": "Writes a short, reviewable PR/MR description anchored on the developer's intent, and blocks PR/MR commands that skip it.",
+  "author": {
+    "name": "Anthony Rimet",
+    "url": "https://github.com/arimet"
+  }
+}

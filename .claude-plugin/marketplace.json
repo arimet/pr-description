@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "pr-description",
+  "description": "PR/MR descriptions a reviewer reads in three lines and a review bot can check.",
+  "owner": {
+    "name": "Anthony Rimet"
+  },
+  "plugins": [
+    {
+      "name": "pr-description",
+      "description": "Writes the PR/MR description on creation, with an optional guard hook.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
