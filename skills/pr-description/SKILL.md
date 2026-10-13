@@ -27,11 +27,11 @@ Take the first that exists:
 2. The developer's own words describing the need in the conversation. Provenance: `written by dev`.
 3. The problem the session was solving before any code was written. Provenance: `inferred from session`.
 
-Quote the need verbatim, in its original language. Never ask the developer for it.
+Quote the need in English. If the source is in another language, translate it faithfully: same meaning, same scope, same level of certainty. Do not summarize, reword, correct or complete it. Add `translated from <language>` to the provenance. Never ask the developer for the intent.
 
 Never derive the intent from the diff: the diff is what gets checked against it.
 
-In update mode, keep the 🎯 Intent of the existing description unless the developer gave a new one.
+In update mode, keep the 🎯 Intent of the existing description unless the developer gave a new one. If the kept quote is not in English, translate it with the rule above.
 
 ## 3. Context
 
@@ -44,7 +44,7 @@ Once the platform is known, the commands of steps 1 and 3 do not depend on each 
 
 ## 4. Write the description
 
-Everything in English, except the intent quote.
+Everything in English, including the intent quote.
 
 ```markdown
 <!-- pr-description:start -->
@@ -54,8 +54,8 @@ Everything in English, except the intent quote.
 
 <details><summary>🎯 Intent</summary>
 
-> <verbatim quote of the need>
-Source: <link or reference> (<provided by dev | written by dev | inferred from session>)
+> <the need, quoted in English>
+Source: <link or reference> (<provided by dev | written by dev | inferred from session>[, translated from <language>])
 </details>
 
 <details><summary>🧭 Non-obvious decisions</summary>
